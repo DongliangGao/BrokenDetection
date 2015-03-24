@@ -81,7 +81,9 @@
     <ClInclude Include="common.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Detection.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Preprocessing.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

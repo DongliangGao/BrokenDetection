@@ -5,7 +5,8 @@
 #pragma warning(disable : 4996)
 
 #include <opencv2/opencv.hpp>
-#include <limits>
+#include <iostream>
+
 #define CV_VER CVAUX_STR(CV_MAJOR_VERSION) CVAUX_STR(CV_MINOR_VERSION) CVAUX_STR(CV_SUBMINOR_VERSION)
 #ifdef _DEBUG
 #define MY_LIB(name) name "d"
@@ -31,4 +32,12 @@
 #pragma comment(lib, CV_LIB("video"))
 
 
-#endif
+void BrokenAreaDetectionNew(const cv::Mat& img_edge, const cv::Vec4f& lines, 
+    std::vector<cv::Point>& broken_position, 
+    std::vector<cv::Point>& dual_position, 
+    std::vector<cv::Point>& crack_position, 
+    const int& win_size);
+
+void PreProcessing(const cv::Mat& img, cv::Mat& edge);
+
+#endif // LAMP_LIBCFG_H
